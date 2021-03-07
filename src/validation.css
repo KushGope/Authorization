@@ -1,0 +1,8 @@
+input {
+  letter-spacing: 1.5px;
+  height: 35px;
+  width: -webkit-fill-available;
+  border-width: 0.5px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px 2px rgb(156 153 153 / 50%);
+}
