@@ -11,6 +11,9 @@ function validation(props) {
         value={props.value}
         onChange={props.onChange}
       />
+      <span className="error">
+        <p id={props.error} />
+      </span>
     </div>
   );
 }

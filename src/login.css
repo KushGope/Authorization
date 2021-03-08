@@ -27,8 +27,6 @@
   flex-wrap: wrap;
   justify-content: space-between;
   height: -webkit-fill-available;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 .footer {
   display: flex;

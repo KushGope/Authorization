@@ -27,11 +27,11 @@ export class login extends Component {
     let passwordPattern = /^(?=.*?[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^*]).{8,32}$/;
     //check for username error;
     if (!usernamePattern.test(this.state.unme)) {
-      console.log("error");
+      document.getElementById("errorunme").innerText = "invalid username!";
     }
     //check for password error;
     else if (!passwordPattern.test(this.state.pwd)) {
-      console.log("error");
+      document.getElementById("errorpwd").innerText = "invalid password!";
     }
     //validating the user input;
     else
@@ -66,7 +66,9 @@ export class login extends Component {
             name="unme"
             value={unme}
             onChange={this.handleChange}
+            error="errorunme"
           />
+
           <div className="form-group">
             <div className="left">
               <label>Password</label>
@@ -77,12 +79,12 @@ export class login extends Component {
               </label>
             </div>
           </div>
-
           <Input
             type="password"
             name="pwd"
             value={pwd}
             onChange={this.handleChange}
+            error="errorpwd"
           />
 
           <Loginbutton
@@ -90,7 +92,6 @@ export class login extends Component {
             text="Login"
             onClick={this.submitHandler}
           />
-
           <footer className="footer">
             <div className="left">New User?</div>
             <div className="right">
